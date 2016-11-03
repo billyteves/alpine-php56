@@ -3,7 +3,7 @@ Alpine-based PHP 5.6
 
 ## PHP Modules
 
-#          | #        | #         | #        | #          | #         | #         | #
+&nbps;     | &nbps;   | &nbps;    | &nbps;   | &nbps;     | &nbps;    | &nbps;    | &nbps;
 ---        | ---      | ---       | ---      |---         |---        |---        |---
 apc        | apcu     | bcmath    | bz2      | Core       | ctype     | curl      | date
 dom        | ereg     | exif      | fileinfo | filter     | gd        | gettext   | hash
