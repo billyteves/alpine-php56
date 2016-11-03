@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:latest
 
 MAINTAINER Billy Ray Teves <billyteves@gmail.com>
 
@@ -10,9 +10,14 @@ ENV PHP_MAX_POST 		100M
 ENV TINI_SHA			af3245bf7c9d3485b5b144983e49552b8a77df58
 ENV TINI_VERSION 		v0.11.0
 
-RUN mkdir -p /etc/apk \
+RUN apk update \
+    && apk upgrade \
+    && mkdir -p /etc/apk \
     && echo "http://alpine.gliderlabs.com/alpine/edge/main" >> /etc/apk/repositories \
     && echo "http://alpine.gliderlabs.com/alpine/edge/community" >> /etc/apk/repositories \
+    && apk add --update tzdata \
+    && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
+    && echo "${TIMEZONE}" > /etc/timezone \
     && apk add --no-cache --virtual --update \
     
     # Install basic apks
@@ -73,7 +78,8 @@ RUN mkdir -p /etc/apk \
     && sed -i "s|;*cgi.fix_pathinfo=.*|cgi.fix_pathinfo= 0|i" /etc/php5/php.ini \
 
     # Clean up
-    
+
+    && apk del tzdata \
     && rm -rf /var/cache/apk/* \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* 
