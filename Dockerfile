@@ -16,7 +16,8 @@ RUN mkdir -p /etc/apk \
     && apk add --no-cache --virtual --update \
     
     # Install basic apks
-    
+
+    ca-certificates \    
     openssl \
     curl \
     bash \
