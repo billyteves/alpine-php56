@@ -3,8 +3,9 @@ Alpine-based PHP 5.6
 
 ## PHP Modules
 
-apc        | apcu     | bcmath    | bz2      | Core       | ctype     | curl      | date
+#          | #        | #         | #        | #          | #         | #         | #
 ---        | ---      | ---       | ---      |---         |---        |---        |---
+apc        | apcu     | bcmath    | bz2      | Core       | ctype     | curl      | date
 dom        | ereg     | exif      | fileinfo | filter     | gd        | gettext   | hash
 iconv      | intl     | json      | libxml   | mbstring   | mcrypt    | memcache  | mysql
 mysqli     | mysqlnd  | openssl   | pcntl    | pcre       | PDO       | pdo_mysql | pdo_pgsql
