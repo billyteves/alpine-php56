@@ -13,8 +13,8 @@ ENV TINI_VERSION 		v0.11.0
 RUN apk update \
     && apk upgrade \
     && mkdir -p /etc/apk \
-    && echo "http://alpine.gliderlabs.com/alpine/edge/main" >> /etc/apk/repositories \
-    && echo "http://alpine.gliderlabs.com/alpine/edge/community" >> /etc/apk/repositories \
+#    && echo "http://alpine.gliderlabs.com/alpine/edge/main" >> /etc/apk/repositories \
+#    && echo "http://alpine.gliderlabs.com/alpine/edge/community" >> /etc/apk/repositories \
     && apk add --update tzdata \
     && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo "${TIMEZONE}" > /etc/timezone \
@@ -52,7 +52,7 @@ RUN apk update \
     php5-xmlreader \ 
     php5-xmlrpc \
     php5-xsl \
-    php5-xdebug \ 
+#    php5-xdebug \ 
     php5-zip \ 
     php5-zlib \ 
 
