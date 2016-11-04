@@ -10,9 +10,10 @@ dom        | ereg     | exif      | fileinfo | filter     | gd        | gettext 
 iconv      | intl     | json      | libxml   | mbstring   | mcrypt    | memcache  | mysql
 mysqli     | mysqlnd  | openssl   | pcntl    | pcre       | PDO       | pdo_mysql | pdo_pgsql
 pdo_sqlite | Phar     | posix     | readline | Reflection | session   | SimpleXML | soap
-SPL        | standard | tokenizer | xdebug   | xml        | xmlreader | xmlrpc    | xmlwriter
+SPL        | standard | tokenizer | *xdebug  | xml        | xmlreader | xmlrpc    | xmlwriter
 xsl        | zip      | zlib      |          |            |           |           |
 
+*removed exists in alpine:edge
 
 ## TINI
 
