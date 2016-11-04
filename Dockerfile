@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM billyteves/alpine:latest
 
 MAINTAINER Billy Ray Teves <billyteves@gmail.com>
 
@@ -19,13 +19,6 @@ RUN apk update \
     && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo "${TIMEZONE}" > /etc/timezone \
     && apk add --no-cache --virtual --update \
-    
-    # Install basic apks
-
-    ca-certificates \    
-    openssl \
-    curl \
-    bash \
     
     # Install PHP and its modules
     
